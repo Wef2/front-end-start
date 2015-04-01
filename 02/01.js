@@ -39,4 +39,3 @@ function rightButtonClick(){
 
 leftButton.addEventListener("click", leftButtonClick);
 rightButton.addEventListener("click", rightButtonClick);
- *
