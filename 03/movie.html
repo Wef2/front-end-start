@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <link href="moviestyle.css" rel="stylesheet" type="text/css"/>
+  <title>Box Office</title>
+</head>
+<body>
+
+<div id="divHeader"> 박스오피스 </div>
+<div id="divWrap"> </div>
+
+<script type="text/template" id="listTemplate">
+<ul>
+  <% for(var i=0; i<list.length; i++) { %>
+  <li>
+  <div class="divWrapContent">
+    <a id="moviePoster" href= "http://m.movie.daum.net/m/detail/main.daum?movieId=<%= list[i].movieId %>"/><img src="<%= list[i].photo.fullname %>" alt="" width="100"></a>
+    <div class="divContent">
+    <a href= "http://m.movie.daum.net/m/detail/main.daum?movieId=<%= list[i].movieId %>"/><strong><%= list[i].titleKo %></strong></a>
+    <p><p id="marketShare">점유율</p><p id="marketSharePoint"><%= list[i].rank.marketShare %></p></p>
+    <a href= "http://m.movie.daum.net/m/detail/point_list.daum?movieId=<%= list[i].movieId %>" id="starBackground"><span id="star" style="width:<%= list[i].moviePoint.inspectPointAvg * 10 %>%"></span></a>
+    <a href= "http://m.movie.daum.net/m/detail/point_list.daum?movieId=<%= list[i].movieId %>" id="inspectPointAvg"/><%= list[i].moviePoint.inspectPointAvg %></a>
+    <a href= "http://m.movie.daum.net/m/reserve/movie_region.daum?movieId=<%= list[i].movieId %>"/><button id="reserveButton">예매</button></a>
+    </div>
+    </div>
+  </li>
+  <%} %>
+</ul>
+</script>
+<script src="util.js"></script>
+<script src="movieapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+#divHeader{
+	font-weight: bold;
+	padding-top:20px;
+	text-align: center;
+	font-size:30px;
+	font-family:gulim;
+	color:#333333;
+	margin:0 auto;
+	width:320px;
+	height:50px;
+	background-color: #AAAAAA;
+}
+
+#divWrap{
+	margin:0 auto;
+	width:320px;
+	height:1000px;
+}
+
+ul, a, p, button, strong{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+}
+
+li{
+	margin:0;
+	padding:10px;
+	width:300px;
+	height:150px;
+	list-style-type: none;
+	border-top: 1px solid #AAAAAA;
+}
+
+.divWrapContent{
+	width:300px;
+}
+
+.divContent{
+	margin-left:10px;
+	float:left;
+}
+
+#moviePoster{
+	float:left;
+}
+
+#expectPointAvg{
+	color:red;
+}
+
+#marketShare{
+	margin-top:10px;
+	margin-right:10px;
+	float:left;
+	font-size:12px;
+	color:#AAAAAA;
+}
+
+#marketSharePoint{
+	margin-top:10px;
+	font-size:12px;
+	color:blue;
+}
+
+#star{
+	display:block;
+	height:13px;
+	background:url(icon_star.gif);
+}
+#starBackground{
+	float:left;
+	margin-top:10px;
+	margin-right:10px;
+	width:70px;
+	height:13px;
+	background:url(icon_star.gif) 0px -25px no-repeat;
+}
+
+#inspectPointAvg{
+	color:red;
+	margin-top:6px;
+	font-size:14px;
+	width:100px;
+	float:left;
+}
+
+#reserveButton{
+	margin-top:40px;
+	width:60px;
+	height:30px;
+}
