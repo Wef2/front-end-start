@@ -1,10 +1,18 @@
 input{
+	margin-left:270px;
+	margin-right:10px;
 	width:200px;
 	height:25px;
+	float:left;
 }
 
+#divSearch{
+	margin-top:20px;
+	margin-bottom:20px;
+}
 
 #divWrap{
+	border:5px solid #AAAAAA;
 	width:800px;
 	margin:0 auto;
 }
@@ -12,4 +20,25 @@ input{
 #searchButton{
 	width:50px;
 	height:30px;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+li{
+	margin-left:20px;
+	margin-bottom:20px;
+	padding:0;
+	list-style-type: none;
+	border:3px solid #DDDDDD;
+	width:750px;
+	height:50px;
+	font-size:15px;
+	color:blue;
+}
+
+p{
+	margin-left:20px;
 }
