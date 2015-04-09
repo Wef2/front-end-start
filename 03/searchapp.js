@@ -6,6 +6,13 @@ var searchInput = $('searchInput');
 
 searchButton.addEventListener('click',showResult);
 searchButton.addEventListener('click',showMoreButton);
+searchInput.addEventListener('keypress', function checkEnter(event){
+	var key = event.charCode;
+	if(key==13){
+		showResult();
+		showMoreButton();
+	}
+});
 
 function showJSON(){
 	var daumSearchAPI = 'https://apis.daum.net/search/web?apikey=39561f0a539d9eff4af3f079ecdc460a&q='+keyword+'&output=json&result='+count;
@@ -22,15 +29,12 @@ function showJSON(){
 }
 
 function showResult(){
-
 	count = 10;	
 	keyword = searchInput.value;
-
 	showJSON();
 }
 
 function showMoreButton(){
-
 	var divMore = $('divMore');
 	if (divMore.hasChildNodes()) {
     divMore.removeChild(divMore.childNodes[0]);
@@ -46,8 +50,6 @@ function showMoreButton(){
 }
 
 function showMore(){
-
 	count = count + 10;
 	showJSON();
-
 }
