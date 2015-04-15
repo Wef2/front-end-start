@@ -1,0 +1,30 @@
+#scoreText{
+	margin-left:230px;
+}
+
+#timeText{
+	margin-left:210px;
+}
+
+
+#divMain{
+	position:relative;
+	margin:0 auto;
+	width:500px;
+	height:600px;
+}
+
+#divGame{
+	position:relative;
+	margin:0 auto;
+	border:3px solid black;
+	width:500px;
+	height:500px;
+}
+
+#divBox{
+	position:absolute;
+	width:30px;
+	height:30px;
+	background-color: red;	
+}
