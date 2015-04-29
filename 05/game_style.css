@@ -1,0 +1,31 @@
+p{
+	margin-left:200px;
+}
+
+#divMain{
+	position:relative;
+	margin:0 auto;
+	width:500px;
+	height:600px;
+}
+
+#divGame{
+	position:relative;
+	margin:0 auto;
+	border:3px solid black;
+	width:500px;
+	height:500px;
+}
+
+#divBox{
+	position:absolute;
+	width:0px;
+	height:0px;
+	background-color: red;	
+}
+
+#startButton{
+	width:500px;
+	height:500px;
+	font-size: 50px;
+}
