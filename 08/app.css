@@ -1,0 +1,23 @@
+.divScore{
+	margin:0 auto;
+	text-align: center;
+}
+
+.divBoard{
+	margin:0 auto;
+	border:3px solid #AAAAAA;
+	width:1000px;
+	height:400px;
+}
+.imgCard{
+	margin-top:10px;
+	margin-left:10px;
+	display:inline-block;
+	border:1px solid #DDDDDD;
+	width:180px;
+	height:180px;	
+}
+
+#score{
+	font-size: 20px;
+}
