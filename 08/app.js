@@ -2,11 +2,6 @@ $(document).ready(function(){
 
 	var cards = [1,2,3,4,5,1,2,3,4,5];
 
-	function shuffle(o){
-	    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-	    return o;
-	}
-
 	shuffle(cards);
 	shuffle(cards);
 	console.log(cards);
@@ -20,9 +15,14 @@ $(document).ready(function(){
 		$($imgCard[i]).attr("status", "closed");
 	}
 
+	var remainTime = 20;
+	var $timeP = $('#time');
+	$timeP.text("남은 시간 : "+remainTime);
+
 	var score = 0;
-	var correct = 0;
 	var $scoreP = $('#score');
+
+	var correct = 0;
 	var clickCount = 0;
 	var firstCard; 
 	var secondCard;
@@ -52,8 +52,11 @@ $(document).ready(function(){
 				correct = correct + 1;
 				$scoreP.text("점수 : "+score);
 				if(correct == 5){
+					score = score + remainTime;
+					$scoreP.text("점수 : "+score);
 					alert("성공! 점수 : "+score);
 					gameStatus = "finished";
+					clearInterval(interval);
 				}
 			}
 			else{
@@ -82,6 +85,20 @@ $(document).ready(function(){
 		}
 
 	});
+
+	var interval = setInterval(function(){ timer() }, 1000);
+
+	function timer() {
+		if(remainTime>0){
+			remainTime = remainTime - 1;
+			$timeP.text("남은 시간 : "+remainTime);
+		}
+		else if(remainTime == 0){
+			clearInterval(interval);
+			gameStatus = "finished";
+			$scoreP.text("점수 : "+score);
+		}
+	}
 
 });
 
